@@ -1,6 +1,6 @@
 //ForgotPassword.js
 
-import { React } from "react";
+import React from "react";
 import axios from "axios";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -21,7 +21,7 @@ const ForgotPassword = () => {
         const data = new FormData(e.currentTarget);
         const email = data.get("email");
         if(!email){
-            toast.error(`Please enter your email`, {
+            toast.error(`Veuillez entrer votre adresse e-mail`, {
                 autoClose: 5000,
                 position: "top-right",
             });
@@ -61,7 +61,7 @@ const ForgotPassword = () => {
                         </Avatar>
                         <Typography component="h1"
                             variant="h5" sx={{ mt: 1 }}>
-                            Forgot Password
+                            Mot de passe oublié
                         </Typography>
 
                         <Box component="form"
@@ -71,7 +71,7 @@ const ForgotPassword = () => {
                                 required
                                 fullWidth
                                 id="email"
-                                label="Email Address"
+                                label="Adresse e-mail"
                                 name="email"
                                 autoComplete="email"
                                 autoFocus
@@ -82,7 +82,7 @@ const ForgotPassword = () => {
                                 variant="contained"
                                 sx={{ mt: 3, mb: 2 }}
                             >
-                                Reset Password
+                                Réinitialiser le mot de passe
                             </Button>
                         </Box>
                     </CardContent>
