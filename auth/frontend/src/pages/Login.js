@@ -59,7 +59,7 @@ const Login = () => {
               <LockOutlinedIcon />
             </Avatar>
             <Typography component="h1" variant="h5">
-              Login
+              Connexion
             </Typography>
 
             <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
@@ -68,7 +68,7 @@ const Login = () => {
                 required
                 fullWidth
                 id="email"
-                label="Email Address"
+                label="Adresse e-mail"
                 name="email"
                 autoComplete="email"
                 autoFocus
@@ -78,19 +78,19 @@ const Login = () => {
                 required
                 fullWidth
                 name="password"
-                label="Password"
+                label="Mot de passe"
                 type="password"
                 id="password"
                 autoComplete="current-password"
               />
               <Button type="submit" fullWidth variant="contained" sx={{ mt: 3, mb: 2 }}>
-                Sign In
+                Se connecter
               </Button>
 
               <Grid container>
                 <Grid size={{ sm: "auto" }}>
                   <Link href="/forgotPassword" variant="body2" sx={{ textDecoration: "none" }}>
-                    Forgot password?
+                    Mot de passe oublié ?
                   </Link>
                 </Grid>
               </Grid>
