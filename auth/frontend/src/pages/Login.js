@@ -38,7 +38,7 @@ const Login = () => {
       }
     } catch (error) {
       console.error(error);
-      toast.error("Erreur serveur. Veuillez réessayer !");
+      toast.error("Erreur serveur. Veuillez réessayer !!!");
     }
   };
 
