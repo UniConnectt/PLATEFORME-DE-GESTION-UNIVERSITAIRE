@@ -12,6 +12,7 @@ import { Card, CardContent } from "@mui/material";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "axios";
+<<<<<<< HEAD
 import { useNavigate } from "react-router-dom"; // ✅ import
 
 const Login = () => {
@@ -26,18 +27,27 @@ const Login = () => {
     enseignant: "/enseignant",
   };
 
+=======
+
+const Login = () => {
+>>>>>>> branche2
   const handleSubmit = async (e) => {
     e.preventDefault();
     const data = new FormData(e.currentTarget);
     const email = data.get("email");
     const password = data.get("password");
 
+<<<<<<< HEAD
     if (!email || !password) {
+=======
+    if(!email || !password){
+>>>>>>> branche2
       toast.error("Veuillez remplir tous les champs !");
       return;
     }
 
     try {
+<<<<<<< HEAD
       const response = await axios.post("http://localhost:3000/api/auth/login", {
         email,
         password,
@@ -61,6 +71,15 @@ const Login = () => {
           // route interne de l'application React actuelle
           navigate(target);
         }
+=======
+      const response = await axios.post(
+        "http://localhost:3000/api/auth/login",
+        { email, password }
+      );
+
+      if (response.data.success) {
+        toast.success(response.data.message);
+>>>>>>> branche2
       } else {
         toast.error(response.data.message);
       }
@@ -116,7 +135,11 @@ const Login = () => {
               </Button>
 
               <Grid container>
+<<<<<<< HEAD
                 <Grid item>
+=======
+                <Grid size={{ sm: "auto" }}>
+>>>>>>> branche2
                   <Link href="/forgotPassword" variant="body2" sx={{ textDecoration: "none" }}>
                     Mot de passe oublié ?
                   </Link>
